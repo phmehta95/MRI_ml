@@ -13,7 +13,7 @@ def save_model(epochs, model, optimizer, criterion):
                 'model_state_dict': model.state_dict(),
                 'optimizer_state_dict': optimizer.state_dict(),
                 'loss': criterion,
-                }, f"../outputs/model.pth")
+                }, f"/home/pruthvi/Desktop/MRI_ml/data/outputs/model.pth")
 def save_plots(train_acc, valid_acc, train_loss, valid_loss):
     """
     Function to save the loss and accuracy plots to disk.
@@ -31,7 +31,7 @@ def save_plots(train_acc, valid_acc, train_loss, valid_loss):
     plt.xlabel('Epochs')
     plt.ylabel('Accuracy')
     plt.legend()
-    plt.savefig(f"../outputs/accuracy.png")
+    plt.savefig(f"/home/pruthvi/Desktop/MRI_ml/data/outputs/accuracy.png")
     
     # loss plots
     plt.figure(figsize=(10, 7))
@@ -46,4 +46,4 @@ def save_plots(train_acc, valid_acc, train_loss, valid_loss):
     plt.xlabel('Epochs')
     plt.ylabel('Loss')
     plt.legend()
-    plt.savefig(f"../outputs/loss.png")
+    plt.savefig(f"/home/pruthvi/Desktop/MRI_ml/data/outputs/loss.png")
